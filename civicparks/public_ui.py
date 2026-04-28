@@ -7,7 +7,8 @@ def render_public_lookup_page() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CivicParks v0.1.0</title>
+<link rel="icon" href="data:,">
+  <title>CivicParks v0.1.1</title>
   <style>
     :root{--ink:#162415;--muted:#536b51;--line:#c8dfc0;--paper:#f8fff4;--card:#ffffff;--accent:#397046;--sun:#d9972b}
     *{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top right,#fff1bf,transparent 32rem),linear-gradient(135deg,#f8fff4,#edf8ff);color:var(--ink)}
@@ -25,10 +26,10 @@ def render_public_lookup_page() -> str:
     <div>
       <p class="eyebrow">CivicSuite / CivicParks</p>
       <h1>Parks and recreation answers without replacing registration systems.</h1>
-      <p>CivicParks v0.1.0 helps staff answer facility, program, rental, league, and park-rule questions while keeping payments, registration records, and work orders in existing systems.</p>
+      <p>CivicParks v0.1.1 helps staff answer facility, program, rental, league, and park-rule questions while keeping payments, registration records, and work orders in existing systems.</p>
     </div>
     <div class="panel">
-      <h2>v0.1.0 boundary</h2>
+      <h2>v0.1.1 boundary</h2>
       <p class="boundary">No payments, no registrations, no participant records, no reservation writes, no crew dispatch, no live LLM calls, and no connector runtime ship in this release.</p>
     </div>
   </section>
@@ -39,8 +40,8 @@ def render_public_lookup_page() -> str:
   </section>
   <section class="panel">
     <h2>Architecture</h2>
-    <p><strong>Resident or staff question</strong> -> CivicParks deterministic API -> CivicCore foundation. Registration and Civic311 adapters are future read-only or handoff designs, not v0.1.0 write paths.</p>
-    <p>Dependency: <code>civiccore==0.2.0</code>. Repo: <a href="https://github.com/CivicSuite/civicparks">CivicSuite/civicparks</a>.</p>
+    <p><strong>Resident or staff question</strong> -> CivicParks deterministic API -> CivicCore foundation. Registration and Civic311 adapters are future read-only or handoff designs, not v0.1.1 write paths.</p>
+    <p>Dependency: <code>civiccore==0.3.0</code>. Repo: <a href="https://github.com/CivicSuite/civicparks">CivicSuite/civicparks</a>.</p>
   </section>
 </main>
 </body>

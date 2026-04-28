@@ -5,7 +5,7 @@ for file in README.md README.txt USER-MANUAL.md USER-MANUAL.txt CHANGELOG.md CON
   test -f "$file" || { echo "VERIFY-DOCS: missing $file"; exit 1; }
 done
 
-for pattern in CivicUtility civicutility CivicElections civicelections CivicCourt civiccourt CivicSafety civicsafety CivicLibrary civiclibrary "0.1.0.dev0" "~=0.2" MIT; do
+for pattern in CivicUtility civicutility CivicElections civicelections CivicCourt civiccourt CivicSafety civicsafety CivicLibrary civiclibrary "0.1.1.dev0" "~=0.2" MIT; do
   if grep -Fq "$pattern" README.md README.txt USER-MANUAL.md USER-MANUAL.txt docs/index.html CHANGELOG.md; then
     echo "VERIFY-DOCS: stale marker found: $pattern"
     exit 1

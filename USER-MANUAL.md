@@ -15,7 +15,7 @@ python -m pip install -e ".[dev]"
 python -m uvicorn civicparks.main:app --host 127.0.0.1 --port 8143
 ```
 
-Runtime dependency: `civiccore==0.2.0`.
+Runtime dependency: `civiccore==0.3.0`.
 
 Primary endpoints:
 
@@ -30,4 +30,4 @@ Primary endpoints:
 
 ![CivicParks architecture](docs/architecture-civicparks.svg)
 
-CivicParks is a module on top of CivicCore. v0.1.0 is deterministic and local: no payments, registration writes, participant records, reservation writes, work-order creation, crew dispatch, live LLM calls, or connector runtime is shipped.
+CivicParks is a module on top of CivicCore. v0.1.1 is deterministic and local: no payments, registration writes, participant records, reservation writes, work-order creation, crew dispatch, live LLM calls, or connector runtime is shipped.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "VERIFY-RELEASE: CivicParks v0.1.0"
+echo "VERIFY-RELEASE: CivicParks v0.1.1"
 if [ -n "${CIVICPARKS_RELEASE_PYTHON:-}" ]; then
   PYTHON_BIN="$CIVICPARKS_RELEASE_PYTHON"
 else
@@ -26,18 +26,18 @@ $PYTHON_BIN -m ruff check .
 rm -rf dist
 $PYTHON_BIN -m build
 
-test -f dist/civicparks-0.1.0-py3-none-any.whl || { echo "missing wheel"; exit 1; }
-test -f dist/civicparks-0.1.0.tar.gz || { echo "missing sdist"; exit 1; }
+test -f dist/civicparks-0.1.1-py3-none-any.whl || { echo "missing wheel"; exit 1; }
+test -f dist/civicparks-0.1.1.tar.gz || { echo "missing sdist"; exit 1; }
 (
   cd dist
-  sha256sum civicparks-0.1.0-py3-none-any.whl civicparks-0.1.0.tar.gz > SHA256SUMS.txt
+  sha256sum civicparks-0.1.1-py3-none-any.whl civicparks-0.1.1.tar.gz > SHA256SUMS.txt
 )
 echo "[PASS] build artifacts and SHA256SUMS"
 
 $PYTHON_BIN - <<'PY'
 import civicparks
-assert civicparks.__version__ == "0.1.0", civicparks.__version__
-print("[PASS] package version 0.1.0")
+assert civicparks.__version__ == "0.1.1", civicparks.__version__
+print("[PASS] package version 0.1.1")
 PY
 
 echo "VERIFY-RELEASE: PASSED"
