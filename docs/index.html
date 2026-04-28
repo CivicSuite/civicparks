@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CivicParks v0.1.0</title>
+  <style>
+    :root{--ink:#162415;--accent:#397046;--line:#c8dfc0;--card:#fbfff8}
+    body{margin:0;font-family:Aptos,Segoe UI,sans-serif;background:linear-gradient(135deg,#f7fff2,#fff7df);color:var(--ink)}
+    main{width:min(1100px,calc(100% - 32px));margin:auto;padding:56px 0}
+    h1{font:800 clamp(2.5rem,7vw,5.4rem)/.95 Georgia,serif;margin:.2em 0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{background:rgba(251,255,248,.94);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 18px 55px rgba(57,112,70,.12)}
+    .badge{display:inline-block;background:#dff3d8;color:#24592f;border-radius:999px;padding:.35rem .7rem;font-weight:800}
+    a{color:var(--accent);font-weight:700} code{background:#e7f5e2;padding:.12rem .34rem;border-radius:.45rem}
+    @media(max-width:800px){.grid{grid-template-columns:1fr}main{padding:34px 0}}
+  </style>
+</head>
+<body>
+<main>
+  <span class="badge">Shipping v0.1.0</span>
+  <h1>Parks help that keeps registration systems authoritative.</h1>
+  <p>CivicParks helps staff draft cited park-rule answers, explain programs and facilities, link residents to existing registration systems, and triage maintenance requests for staff review.</p>
+  <section class="grid">
+    <article class="card"><h2>For Staff</h2><p>Draft policy answers, program replies, registration guidance, and maintenance categories that staff verify before use.</p></article>
+    <article class="card"><h2>For IT</h2><p>FastAPI runtime pinned to <code>civiccore==0.2.0</code>, deterministic tests, and no registration-system writes.</p></article>
+    <article class="card"><h2>Boundary</h2><p>No payments, registrations, participant records, reservation writes, crew dispatch, live LLM calls, or connector runtime.</p></article>
+  </section>
+  <section class="card" style="margin-top:24px">
+    <h2>Architecture</h2>
+    <img src="architecture-civicparks.svg" alt="CivicParks architecture diagram" style="width:100%;height:auto">
+  </section>
+  <section class="card" style="margin-top:24px">
+    <h2>Boundaries</h2>
+    <p>CivicParks v0.1.0 does not process payments, enroll participants, manage participant records, reserve facilities, dispatch crews, replace Civic311, call live LLMs, or ship parks connector runtime.</p>
+  </section>
+  <p>Repository: <a href="https://github.com/CivicSuite/civicparks">github.com/CivicSuite/civicparks</a></p>
+</main>
+</body>
+</html>
