@@ -30,6 +30,6 @@ def triage_maintenance_request(issue: str, location: str) -> MaintenanceTriage:
         staff_review_required=True,
         boundary=(
             "Draft triage only. CivicParks does not dispatch crews, create work orders, "
-            "or write into Civic311 in v0.1.0."
+            "or write into Civic311 in v0.1.1."
         ),
     )

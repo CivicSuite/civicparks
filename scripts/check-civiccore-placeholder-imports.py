@@ -36,7 +36,7 @@ def main() -> int:
                 name = module.split(".")[1]
                 if name in PLACEHOLDERS:
                     failures.append(
-                        f"{path}: civiccore.{name} is a placeholder package in v0.2.0. "
+                        f"{path}: civiccore.{name} is a placeholder package in v0.3.0. "
                         "Do not import from it."
                     )
     if failures:
