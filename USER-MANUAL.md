@@ -2,7 +2,7 @@
 
 ## Non-Technical Staff
 
-CivicParks helps parks and recreation staff prepare cited policy answers, answer program and facility questions, draft registration guidance that links residents to existing systems, and triage maintenance requests for staff review.
+CivicParks helps parks and recreation staff prepare cited policy answers, answer program and facility questions, draft registration guidance that links residents to existing systems, retrieve optional saved registration/maintenance workpapers, and triage maintenance requests for staff review.
 
 Staff remain responsible for every answer, registration note, facility rule, and maintenance handoff. CivicParks does not process payments, enroll participants, manage participant records, reserve facilities, dispatch crews, replace Civic311, or replace recreation registration systems.
 
@@ -16,6 +16,8 @@ python -m uvicorn civicparks.main:app --host 127.0.0.1 --port 8143
 ```
 
 Runtime dependency: `civiccore==0.3.0`.
+
+Optional persistence: set `CIVICPARKS_WORKPAPER_DB_URL` to enable SQLAlchemy-backed registration assistance and maintenance triage records. Leave it unset for deterministic stateless operation.
 
 Primary endpoints:
 

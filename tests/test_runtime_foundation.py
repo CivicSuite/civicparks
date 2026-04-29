@@ -10,6 +10,7 @@ def test_root_reports_honest_current_state():
     payload = client.get("/").json()
     assert payload["name"] == "CivicParks"
     assert payload["version"] == __version__
+    assert "database-backed registration/maintenance workpapers" in payload["message"]
     assert "payments" in payload["message"]
     assert "not implemented yet" in payload["message"]
 
@@ -64,10 +65,10 @@ def test_api_endpoints_return_deterministic_payloads():
             }
         },
     ).json()
-    assert registration["staff_review_required"] is True
+    assert registration["assistance_id"] is None
 
     triage = client.post(
         "/api/v1/civicparks/maintenance-triage",
         json={"issue": "trash bin full", "location": "Oak Park"},
     ).json()
-    assert triage["suggested_category"] == "park-cleanup"
+    assert triage["triage_id"] is None

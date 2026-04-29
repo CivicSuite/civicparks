@@ -1,7 +1,7 @@
 CivicParks User Manual
 
-For staff: use CivicParks to draft cited parks policy answers, answer program and facility questions, prepare registration-link guidance, and triage maintenance requests. Staff approve every output before use.
+For staff: use CivicParks to draft cited parks policy answers, answer program and facility questions, prepare registration-link guidance, retrieve optional saved registration/maintenance workpapers, and triage maintenance requests. Staff approve every output before use.
 
 Boundaries: CivicParks does not process payments, enroll participants, manage participant records, reserve facilities, dispatch crews, replace Civic311, or replace recreation registration systems.
 
-For IT: install with python -m pip install -e ".[dev]" and run with python -m uvicorn civicparks.main:app --host 127.0.0.1 --port 8143. Depends on civiccore==0.3.0.
+For IT: install with python -m pip install -e ".[dev]" and run with python -m uvicorn civicparks.main:app --host 127.0.0.1 --port 8143. Depends on civiccore==0.3.0. Set CIVICPARKS_WORKPAPER_DB_URL to enable SQLAlchemy-backed registration assistance and maintenance triage records.

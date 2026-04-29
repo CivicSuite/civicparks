@@ -2,6 +2,11 @@
 
 ## [0.1.1] - 2026-04-28
 
+### Added
+
+- Optional SQLAlchemy-backed registration assistance and maintenance triage workpaper records via `CIVICPARKS_WORKPAPER_DB_URL`.
+- Registration assistance and maintenance triage retrieval endpoints for persisted records.
+
 ### Changed
 
 - Dependency-alignment release: moved CivicParks to `civiccore==0.3.0` while preserving the existing v0.1.0 runtime foundation behavior.
